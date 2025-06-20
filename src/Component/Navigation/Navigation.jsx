@@ -3,7 +3,7 @@ import { FaTelegramPlane } from 'react-icons/fa';
 import { GrProjects, GrResume } from 'react-icons/gr';
 import { LuNotebookTabs } from 'react-icons/lu';
 import { SiDataiku } from 'react-icons/si';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navigation = () => {
     return (
@@ -12,41 +12,41 @@ const Navigation = () => {
                 <h1>logo</h1>
             </div>
             <ul className=''>
-
-                <Link>
-                    <li className='border p-4 border-gray-600 rounded-t-md flex flex-col items-center justify-center gap-1 bg-linear-to-r/srgb from-[#262627] to-[#464a4a] '>
-                        <div className='text-2xl'><SiDataiku></SiDataiku></div>
+                <NavLink to="/" className={({ isActive }) =>isActive ? 'text-green-500': 'text-white'}>
+                    <li className='border p-4 border-gray-600 rounded-t-md flex flex-col items-center justify-center gap-1 bg-gradient-to-r from-[#262627] to-[#464a4a] duration-200'>
+                        
+                        <div className='text-2xl'><SiDataiku /></div>
                         <p className='font-semibold'>About</p>
                     </li>
-                </Link>
+                </NavLink>
 
-                <Link>
-                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 bg-linear-to-r/srgb from-[#262627] to-[#464a4a]'>
+                <NavLink to='/resume' className={({ isActive }) =>isActive ? 'text-green-500': 'text-white'}>
+                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 bg-linear-to-r/srgb from-[#262627] to-[#464a4a] duration-200'>
                         <div className='text-2xl'><GrResume></GrResume></div>
                         <p className='font-semibold'>Resume</p>
                     </li>
-                </Link>
+                </NavLink>
 
-                <Link>
-                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 bg-linear-to-r/srgb from-[#262627] to-[#464a4a]'>
+                <NavLink to='/projects' className={({ isActive }) =>isActive ? 'text-green-500': 'text-white'}>
+                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 bg-linear-to-r/srgb from-[#262627] to-[#464a4a] duration-200'>
                         <div className='text-2xl'><GrProjects></GrProjects></div>
-                        <p className='font-semibold'>Project</p>
+                        <p className='font-semibold'>Projects</p>
                     </li>
-                </Link>
+                </NavLink>
 
-                <Link>
-                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 bg-linear-to-r/srgb from-[#262627] to-[#464a4a]'>
+                <NavLink to='/blogs' className={({ isActive }) =>isActive ? 'text-green-500': 'text-white'}>
+                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 bg-linear-to-r/srgb from-[#262627] to-[#464a4a] duration-200'>
                         <div className='text-2xl'><LuNotebookTabs></LuNotebookTabs></div>
                         <p className='font-semibold'>Blog</p>
                     </li>
-                </Link>
+                </NavLink>
 
-                <Link>
-                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 rounded-b-md bg-linear-to-r/srgb from-[#262627] to-[#464a4a]'>
+                <NavLink to='/contact' className={({ isActive }) =>isActive ? 'text-green-500': 'text-white'}>
+                    <li className='border-x border-b p-4 border-gray-600 flex flex-col items-center justify-center gap-1 rounded-b-md bg-linear-to-r/srgb from-[#262627] to-[#464a4a] duration-200'>
                         <div className='text-2xl'><FaTelegramPlane></FaTelegramPlane></div>
                         <p className='font-semibold'>Contact</p>
                     </li>
-                </Link>
+                </NavLink>
             </ul>
         </div>
     );
