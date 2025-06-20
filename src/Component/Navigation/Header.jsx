@@ -4,7 +4,7 @@ import { TiArrowDownThick } from 'react-icons/ti';
 
 const Header = () => {
     return (
-        <div className='border-b flex items-center justify-between py-3 border-gray-600'>
+        <div className='border-b flex items-center justify-between py-3 border-gray-600 bg-black'>
             <h1 className='name-style text-4xl'>muksitul islam</h1>
             <div className='flex items-center gap-3'>
                 {/* button */}

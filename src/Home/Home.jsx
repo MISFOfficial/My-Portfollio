@@ -7,13 +7,17 @@ import Header from '../Component/Navigation/Header';
 const Home = () => {
     return (
         <div className='max-w-[1280px] mx-auto'>
-            <Header></Header>
-            <div className='flex mt-20'>
-                <div className='flex'>
+            <div className='sticky top-0 z-[1000]'>
+                <Header></Header>
+            </div>
+            <div className='flex  gap-5 mt-18'>
+                <div className='flex gap-10 sticky top-35.5 z-[1000]  h-fit'>
                     <Navigation></Navigation>
                     <Profile></Profile>
                 </div>
-                <Outlet></Outlet>
+                <div className='flex-1'>
+                    <Outlet></Outlet>
+                </div>
             </div>
         </div>
     );
